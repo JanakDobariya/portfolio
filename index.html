@@ -31,7 +31,6 @@
     overflow-x: hidden;
   }
 
-  /* Noise overlay */
   body::before {
     content: '';
     position: fixed;
@@ -63,10 +62,10 @@
     color: var(--accent);
   }
 
-  .nav-links { display: flex; gap: 2.5rem; }
+  .nav-links { display: flex; gap: 2rem; }
   .nav-links a {
     font-family: 'Space Mono', monospace;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--muted);
     text-decoration: none;
     letter-spacing: 2px;
@@ -150,7 +149,6 @@
     animation: fadeUp 0.8s 0.6s forwards;
     font-weight: 300;
   }
-
   .hero-desc strong { color: var(--text); font-weight: 500; }
 
   .hero-cta {
@@ -314,12 +312,81 @@
     letter-spacing: 2px;
     text-transform: uppercase;
   }
- 
 
+  /* EDUCATION */
+  #education { background: var(--bg); }
 
- 
+  .edu-timeline {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .edu-item {
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 3rem;
+  }
+  .edu-item:last-child { padding-bottom: 0; }
+
+  .edu-dot-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 16px;
+  }
+
+  .edu-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-top: 4px;
+    flex-shrink: 0;
+  }
+  .edu-dot.active { background: var(--accent); }
+  .edu-dot.done { background: var(--muted); }
+
+  .edu-line {
+    width: 1px;
+    flex: 1;
+    background: var(--border);
+    margin-top: 8px;
+  }
+
+  .edu-year {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+  }
+  .edu-year.active { color: var(--accent); }
+  .edu-year.done { color: var(--muted); }
+
+  .edu-degree {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: var(--text);
+    margin-bottom: 0.3rem;
+  }
+
+  .edu-uni {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-bottom: 0.8rem;
+  }
+  .edu-uni .cgpa { color: var(--accent); }
+
+  .edu-desc {
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
   /* SKILLS */
-  #skills { background: var(--bg); }
+  #skills { background: var(--bg2); }
 
   .skills-grid {
     display: grid;
@@ -329,7 +396,7 @@
   }
 
   .skill-group {
-    background: var(--bg2);
+    background: var(--bg3);
     border: 1px solid var(--border);
     padding: 2rem;
     border-radius: 4px;
@@ -340,10 +407,7 @@
     transform: translateY(-4px);
   }
 
-  .skill-group-icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
+  .skill-group-icon { font-size: 2rem; margin-bottom: 1rem; }
 
   .skill-group-title {
     font-family: 'Space Mono', monospace;
@@ -378,6 +442,77 @@
     color: var(--accent3);
     border-color: rgba(245,0,160,0.2);
   }
+
+  /* LANGUAGES */
+  #languages { background: var(--bg); }
+
+  .lang-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 1100px;
+  }
+
+  .lang-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    border-radius: 4px;
+    transition: border-color 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .lang-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+  }
+
+  .lang-flag {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .lang-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+  }
+
+  .lang-level {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+  }
+
+  .lang-dots {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .lang-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,245,160,0.3);
+    background: transparent;
+    transition: background 0.2s;
+  }
+
+  .lang-dot.filled {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .lang-card.beginner .lang-dot.filled { background: var(--muted); border-color: var(--muted); }
+  .lang-card.beginner .lang-dot { border-color: rgba(107,107,136,0.3); }
+  .lang-card.beginner .lang-name { color: var(--muted); }
 
   /* PROJECTS */
   #projects { background: var(--bg2); }
@@ -473,7 +608,7 @@
   }
 
   /* CONTACT */
-  #contact { background: var(--bg); }
+  #contact { background: var(--bg2); }
 
   .contact-inner {
     max-width: 700px;
@@ -545,17 +680,6 @@
     letter-spacing: 1px;
   }
 
-  /* CURSOR */
-  .cursor {
-    display: inline-block;
-    width: 3px;
-    height: 1em;
-    background: var(--accent);
-    vertical-align: text-bottom;
-    animation: blink 1s step-end infinite;
-  }
-  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
     .nav-links { display: none; }
@@ -574,7 +698,9 @@
   <div class="nav-links">
     <a href="#home">Home</a>
     <a href="#about">About</a>
+    <a href="#education">Education</a>
     <a href="#skills">Skills</a>
+    <a href="#languages">Languages</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </div>
@@ -612,7 +738,7 @@
   <div class="about-grid">
     <div class="about-text">
       <p>
-        I'm <strong>Janak Dobariya</strong>, an AI & Machine Learning engineer with a deep passion for building systems that are not just smart — but <strong>impactful</strong>.
+        I'm <strong>Janak Dobariya</strong>, an AI & Machine Learning engineer currently pursuing a <strong>Master's in NLP at Trier University, Germany</strong>.
       </p>
       <p>
         My work spans the full spectrum of modern AI: from training <strong>deep learning models</strong> and fine-tuning <strong>large language models</strong>, to building robust <strong>data pipelines</strong> and intelligent <strong>automation workflows</strong>.
@@ -642,50 +768,47 @@
   </div>
 </section>
 
- <!-- EDUCATION -->
+<!-- EDUCATION -->
 <section id="education">
   <div class="section-label">02 — Education</div>
   <h2 class="section-title">Academic Path</h2>
-  <div style="max-width: 800px; display: flex; flex-direction: column; gap: 0;">
+  <div class="edu-timeline">
 
-    <!-- Master's -->
-    <div style="display: flex; gap: 2rem; padding-bottom: 3rem; position: relative;">
-      <div style="display: flex; flex-direction: column; align-items: center; min-width: 16px;">
-        <div style="width: 12px; height: 12px; border-radius: 50%; background: var(--accent); margin-top: 4px; flex-shrink: 0;"></div>
-        <div style="width: 1px; flex: 1; background: var(--border); margin-top: 8px;"></div>
+    <div class="edu-item">
+      <div class="edu-dot-col">
+        <div class="edu-dot active"></div>
+        <div class="edu-line"></div>
       </div>
       <div>
-        <div style="font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--accent); letter-spacing: 2px; margin-bottom: 0.5rem;">2025 — PRESENT</div>
-        <div style="font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 1px; margin-bottom: 0.3rem;">Master's in Computer Science — NLP</div>
-        <div style="font-family: 'Space Mono', monospace; font-size: 0.75rem; color: var(--muted); margin-bottom: 0.8rem;">Trier University, Germany</div>
-        <div style="font-size: 0.9rem; color: var(--muted); font-weight: 300;">Specializing in Natural Language Processing, deep learning for text, and multilingual AI systems.</div>
+        <div class="edu-year active">2025 — Present</div>
+        <div class="edu-degree">Master's in Computer Science — NLP</div>
+        <div class="edu-uni">Trier University, Germany</div>
+        <div class="edu-desc">Specializing in Natural Language Processing, deep learning for text, and multilingual AI systems.</div>
       </div>
     </div>
 
-    <!-- BE -->
-    <div style="display: flex; gap: 2rem; padding-bottom: 3rem; position: relative;">
-      <div style="display: flex; flex-direction: column; align-items: center; min-width: 16px;">
-        <div style="width: 12px; height: 12px; border-radius: 50%; background: var(--accent); margin-top: 4px; flex-shrink: 0;"></div>
-        <div style="width: 1px; flex: 1; background: var(--border); margin-top: 8px;"></div>
+    <div class="edu-item">
+      <div class="edu-dot-col">
+        <div class="edu-dot active"></div>
+        <div class="edu-line"></div>
       </div>
       <div>
-        <div style="font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--accent); letter-spacing: 2px; margin-bottom: 0.5rem;">2022 — 2025</div>
-        <div style="font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 1px; margin-bottom: 0.3rem;">B.E. Computer Science & Engineering (AI & ML)</div>
-        <div style="font-family: 'Space Mono', monospace; font-size: 0.75rem; color: var(--muted); margin-bottom: 0.8rem;">Gujarat Technological University, Ahmedabad — <span style="color: var(--accent);">9.22 CGPA</span></div>
-        <div style="font-size: 0.9rem; color: var(--muted); font-weight: 300;">AI, Machine Learning, Deep Learning, NLP, Image Processing, Big Data Analysis, and AI in Healthcare.</div>
+        <div class="edu-year active">2022 — 2025</div>
+        <div class="edu-degree">B.E. Computer Science & Engineering (AI & ML)</div>
+        <div class="edu-uni">Gujarat Technological University, Ahmedabad — <span class="cgpa">9.22 CGPA</span></div>
+        <div class="edu-desc">AI, Machine Learning, Deep Learning, NLP, Image Processing, Big Data Analysis, and AI in Healthcare.</div>
       </div>
     </div>
 
-    <!-- Diploma -->
-    <div style="display: flex; gap: 2rem;">
-      <div style="display: flex; flex-direction: column; align-items: center; min-width: 16px;">
-        <div style="width: 12px; height: 12px; border-radius: 50%; background: var(--muted); margin-top: 4px; flex-shrink: 0;"></div>
+    <div class="edu-item">
+      <div class="edu-dot-col">
+        <div class="edu-dot done"></div>
       </div>
       <div>
-        <div style="font-family: 'Space Mono', monospace; font-size: 0.7rem; color: var(--muted); letter-spacing: 2px; margin-bottom: 0.5rem;">2019 — 2022</div>
-        <div style="font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 1px; margin-bottom: 0.3rem;">Diploma in Computer Engineering</div>
-        <div style="font-family: 'Space Mono', monospace; font-size: 0.75rem; color: var(--muted); margin-bottom: 0.8rem;">Gujarat Technological University, Ahmedabad — <span style="color: var(--muted);">7.61 CGPA</span></div>
-        <div style="font-size: 0.9rem; color: var(--muted); font-weight: 300;">Data Structures, Computer Networks, Database Management, Digital Electronics, and Operating Systems.</div>
+        <div class="edu-year done">2019 — 2022</div>
+        <div class="edu-degree">Diploma in Computer Engineering</div>
+        <div class="edu-uni">Gujarat Technological University, Ahmedabad — 7.61 CGPA</div>
+        <div class="edu-desc">Data Structures, Computer Networks, Database Management, Digital Electronics, and Operating Systems.</div>
       </div>
     </div>
 
@@ -694,7 +817,7 @@
 
 <!-- SKILLS -->
 <section id="skills">
-  <div class="section-label">02 — Skills</div>
+  <div class="section-label">03 — Skills</div>
   <h2 class="section-title">Expertise</h2>
   <div class="skills-grid">
     <div class="skill-group">
@@ -733,8 +856,8 @@
         <span class="tag">EDA</span>
         <span class="tag">Feature Eng.</span>
         <span class="tag">SQL</span>
-       <span class="tag">Matplotlib</span>
-       <span class="tag">Seaborn</span>
+        <span class="tag">Matplotlib</span>
+        <span class="tag">Seaborn</span>
       </div>
     </div>
     <div class="skill-group">
@@ -742,31 +865,97 @@
       <div class="skill-group-title">Automation & Scraping</div>
       <div class="skill-tags">
         <span class="tag pink">Web Scraping</span>
-       <span class="tag pink">Requests</span>
+        <span class="tag pink">Requests</span>
         <span class="tag pink">Selenium</span>
         <span class="tag pink">BeautifulSoup</span>
         <span class="tag pink">Playwright</span>
         <span class="tag pink">Pipelines</span>
         <span class="tag pink">FastAPI</span>
-       <span class="tag pink">n8n</span>
+        <span class="tag pink">n8n</span>
       </div>
-  </div>
+    </div>
     <div class="skill-group">
-      <div class="skill-group-icon">☁️</div>
+      <div class="skill-group-icon">🚀</div>
       <div class="skill-group-title">App & Deployment</div>
       <div class="skill-tags">
-        <span class="tag pink">Streamlit</span>
-        <span class="tag pink">Pythonanywhere</span>
-        <span class="tag pink">Vercel</span>
-        <span class="tag pink">Render</span>
-        <span class="tag pink">Wix</span>
+        <span class="tag blue">Streamlit</span>
+        <span class="tag blue">Pythonanywhere</span>
+        <span class="tag blue">Vercel</span>
+        <span class="tag blue">Render</span>
+        <span class="tag blue">Wix</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- LANGUAGES -->
+<section id="languages">
+  <div class="section-label">04 — Languages</div>
+  <h2 class="section-title">I Speak</h2>
+  <div class="lang-grid">
+
+    <!-- German: 1/5 -->
+    <div class="lang-card beginner">
+      <span class="lang-flag">🇩🇪</span>
+      <div class="lang-name">German</div>
+      <div class="lang-level">Beginner — A1</div>
+      <div class="lang-dots">
+        <div class="lang-dot filled"></div>
+        <div class="lang-dot"></div>
+        <div class="lang-dot"></div>
+        <div class="lang-dot"></div>
+        <div class="lang-dot"></div>
+      </div>
+    </div>
+
+    <!-- English: 4/5 -->
+    <div class="lang-card">
+      <span class="lang-flag">🇬🇧</span>
+      <div class="lang-name">English</div>
+      <div class="lang-level">Advanced — C1</div>
+      <div class="lang-dots">
+        <div class="lang-dot filled"></div>
+        <div class="lang-dot filled"></div>
+        <div class="lang-dot filled"></div>
+        <div class="lang-dot filled"></div>
+        <div class="lang-dot"></div>
+      </div>
+    </div>
+
+    <!-- Hindi: 5/5 -->
+    <div class="lang-card">
+      <span class="lang-flag">🇮🇳</span>
+      <div class="lang-name">Hindi</div>
+      <div class="lang-level">Native — C2</div>
+      <div class="lang-dots">
+        <div class="lang-dot filled"></div>
+        <div class="lang-dot filled"></div>
+        <div class="lang-dot filled"></div>
+        <div class="lang-dot filled"></div>
+        <div class="lang-dot filled"></div>
+      </div>
+    </div>
+
+    <!-- Gujarati: 5/5 -->
+    <div class="lang-card">
+      <span class="lang-flag">🏡</span>
+      <div class="lang-name">Gujarati</div>
+      <div class="lang-level">Native — C2</div>
+      <div class="lang-dots">
+        <div class="lang-dot filled"></div>
+        <div class="lang-dot filled"></div>
+        <div class="lang-dot filled"></div>
+        <div class="lang-dot filled"></div>
+        <div class="lang-dot filled"></div>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
-  <div class="section-label">03 — Projects</div>
+  <div class="section-label">05 — Projects</div>
   <h2 class="section-title">Featured Work</h2>
   <div class="projects-grid">
 
@@ -798,8 +987,7 @@
       </div>
       <div class="project-body">
         <h3 class="project-title">YouTube AI Assistant</h3>
-        <p class="project-desc">A Streamlit app that extracts, summarizes, and answers questions about YouTube videos using transcripts, HuggingFace embeddings, Gemini Pro LLM, and FAISS for semantic search.
-</p>
+        <p class="project-desc">A Streamlit app that extracts, summarizes, and answers questions about YouTube videos using transcripts, HuggingFace embeddings, Gemini Pro LLM, and FAISS for semantic search.</p>
         <div class="project-stack">
           <span class="stack-tag">HuggingFace</span>
           <span class="stack-tag">Gemini Pro</span>
@@ -836,17 +1024,16 @@
       </div>
       <div class="project-body">
         <h3 class="project-title">WhatsAutoBot</h3>
-        <p class="project-desc">Automates WhatsApp Web interactions using Selenium — reads phone numbers from Excel, opens chats via API links, verifies contacts, and identifies business accounts automatically.
-</p>
+        <p class="project-desc">Automates WhatsApp Web interactions using Selenium — reads phone numbers from Excel, opens chats via API links, verifies contacts, and identifies business accounts automatically.</p>
         <div class="project-stack">
           <span class="stack-tag">Selenium</span>
           <span class="stack-tag">Python</span>
-          <span class="stack-tag">Excel</span>
+          <span class="stack-tag">openpyxl</span>
         </div>
       </div>
     </div>
 
-   <div class="project-card">
+    <div class="project-card">
       <div class="project-header">
         <div class="project-num">05</div>
         <div class="project-links">
@@ -859,7 +1046,7 @@
         <div class="project-stack">
           <span class="stack-tag">Django</span>
           <span class="stack-tag">Python</span>
-         <span class="stack-tag">Web</span>
+          <span class="stack-tag">Web</span>
           <span class="stack-tag">AI</span>
         </div>
       </div>
@@ -871,7 +1058,7 @@
 <!-- CONTACT -->
 <section id="contact">
   <div class="contact-inner">
-    <div class="section-label">04 — Contact</div>
+    <div class="section-label">06 — Contact</div>
     <h2 class="section-title">Let's Build<br>Something</h2>
     <p class="contact-desc">Open to collaboration, freelance projects, or just a good conversation about AI. Drop me a line.</p>
     <div class="contact-links">
@@ -920,7 +1107,7 @@
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.skill-group, .project-card, .stat-card').forEach(el => {
+  document.querySelectorAll('.skill-group, .project-card, .stat-card, .edu-item, .lang-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
