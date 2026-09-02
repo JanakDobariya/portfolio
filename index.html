@@ -576,6 +576,13 @@
   }
   .project-link:hover { border-color: var(--accent); color: var(--accent); }
 
+  .projects-more {
+    max-width: 1100px;
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+  }
+
   .project-body { padding: 0 2rem 2rem; }
 
   .project-title {
@@ -608,7 +615,10 @@
   }
 
   /* CONTACT */
-  #contact { background: var(--bg2); }
+  #contact {
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+  }
 
   .contact-inner {
     max-width: 700px;
@@ -749,7 +759,7 @@
     </div>
     <div class="about-stats">
       <div class="stat-card">
-        <div class="stat-num">5+</div>
+        <div class="stat-num">6+</div>
         <div class="stat-label">AI Projects Built</div>
       </div>
       <div class="stat-card">
@@ -967,16 +977,16 @@
       <div class="project-header">
         <div class="project-num">01</div>
         <div class="project-links">
-          <a href="https://github.com/JanakDobariya/Narad-Muni-chatbot" target="_blank" rel="noopener noreferrer" aria-label="Narad Muni Chatbot repository" class="project-link">↗</a>
+          <a href="https://github.com/JanakDobariya/ai-patent-intelligence-dashboard" target="_blank" rel="noopener noreferrer" aria-label="AI Patent Intelligence Dashboard repository" class="project-link">↗</a>
         </div>
       </div>
       <div class="project-body">
-        <h3 class="project-title">Narad Muni Chatbot</h3>
-        <p class="project-desc">A Streamlit conversational assistant using Groq's chat completions API, with structured session history for context-aware replies.</p>
+        <h3 class="project-title">AI Patent Intelligence Dashboard</h3>
+        <p class="project-desc">An interactive dashboard for exploring 80,566 US AI patent records through KPIs, trends, organisations, inventors, and technology areas.</p>
         <div class="project-stack">
           <span class="stack-tag">Streamlit</span>
-          <span class="stack-tag">GROQ</span>
-          <span class="stack-tag">GPT-OSS</span>
+          <span class="stack-tag">Plotly</span>
+          <span class="stack-tag">Pandas</span>
           <span class="stack-tag">Python</span>
         </div>
       </div>
@@ -1004,17 +1014,15 @@
     <div class="project-card">
       <div class="project-header">
         <div class="project-num">03</div>
-        <div class="project-links">
-          <a href="https://github.com/JanakDobariya/ai-patent-intelligence-dashboard" target="_blank" rel="noopener noreferrer" aria-label="AI Patent Intelligence Dashboard repository" class="project-link">↗</a>
-        </div>
+        <!-- Add Live Demo and GitHub links here after the project is published. -->
       </div>
       <div class="project-body">
-        <h3 class="project-title">AI Patent Intelligence Dashboard</h3>
-        <p class="project-desc">An interactive dashboard for exploring artificial-intelligence patent activity, including trends, organisations, inventors, technology areas, and geographic patterns.</p>
+        <h3 class="project-title">Movie Recommendation System</h3>
+        <p class="project-desc">A content-based recommender that finds five similar films from 4,800 TMDB titles using TF-IDF metadata vectors and cosine similarity.</p>
         <div class="project-stack">
           <span class="stack-tag">Streamlit</span>
-          <span class="stack-tag">Plotly</span>
-          <span class="stack-tag">Pandas</span>
+          <span class="stack-tag">Scikit-learn</span>
+          <span class="stack-tag">TF-IDF</span>
           <span class="stack-tag">Python</span>
         </div>
       </div>
@@ -1023,6 +1031,25 @@
     <div class="project-card">
       <div class="project-header">
         <div class="project-num">04</div>
+        <div class="project-links">
+          <a href="https://github.com/JanakDobariya/Narad-Muni-chatbot" target="_blank" rel="noopener noreferrer" aria-label="Narad Muni Chatbot repository" class="project-link">↗</a>
+        </div>
+      </div>
+      <div class="project-body">
+        <h3 class="project-title">Narad Muni Chatbot</h3>
+        <p class="project-desc">A Streamlit conversational assistant using Groq's chat completions API, with structured session history for context-aware replies.</p>
+        <div class="project-stack">
+          <span class="stack-tag">Streamlit</span>
+          <span class="stack-tag">GROQ</span>
+          <span class="stack-tag">GPT-OSS</span>
+          <span class="stack-tag">Python</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <div class="project-num">05</div>
         <div class="project-links">
           <a href="https://github.com/JanakDobariya/titanic-streamlit-app" target="_blank" rel="noopener noreferrer" aria-label="Titanic Survival Predictor repository" class="project-link">↗</a>
         </div>
@@ -1041,7 +1068,7 @@
 
     <div class="project-card">
       <div class="project-header">
-        <div class="project-num">05</div>
+        <div class="project-num">06</div>
         <div class="project-links">
           <a href="https://github.com/JanakDobariya/CampusCloud-Project" target="_blank" rel="noopener noreferrer" aria-label="CampusCloud repository" class="project-link">↗</a>
         </div>
@@ -1058,6 +1085,9 @@
       </div>
     </div>
 
+  </div>
+  <div class="projects-more">
+    <a href="projects.html" class="btn btn-primary">View All Projects →</a>
   </div>
 </section>
 
