@@ -31,11 +31,12 @@ Projects are ordered by technical depth, completeness, and relevance to AI/ML ro
 | ---: | --- | --- | --- | --- |
 | 1 | AI Patent Intelligence Dashboard | Interactive analysis of 80,566 US AI patent records with filters, KPIs, trends, rankings, and downloadable data. | [GitHub](https://github.com/JanakDobariya/ai-patent-intelligence-dashboard) | [Open app](https://ai-patent-intelligence-dashboard.streamlit.app/) |
 | 2 | YouTube AI Assistant | Transcript-grounded summarisation and question answering using semantic retrieval and Groq. | [GitHub](https://github.com/JanakDobariya/YouTube-Assistant) | [Open app](https://youtube-assistant-summarizer.streamlit.app/) |
-| 3 | Movie Recommendation System | Content-based recommendations across 4,800 TMDB movies using TF-IDF vectors and cosine similarity. | Publishing soon | Publishing soon |
-| 4 | Twitter Sentiment Classifier | Classifies short social-media text as negative, neutral, or positive with a trained scikit-learn model. | [GitHub](https://github.com/JanakDobariya/twitter-sentiment-classifier) | [Open app](https://twitter-sentiment-classifier.streamlit.app/) |
-| 5 | Narad Muni Chatbot | Session-aware Streamlit chatbot powered by Groq's chat-completions API. | [GitHub](https://github.com/JanakDobariya/Narad-Muni-chatbot) | [Open app](https://narad-muni-chatbot.streamlit.app/) |
-| 6 | Titanic Survival Predictor | Educational Streamlit interface for a trained gradient-boosting classification model. | [GitHub](https://github.com/JanakDobariya/titanic-streamlit-app) | [Open app](https://titanic-survival-dataset.streamlit.app/) |
-| 7 | CampusCloud | Django academic portal with profiles, notes, notifications, quizzes, results, and campus tools. | [GitHub](https://github.com/JanakDobariya/CampusCloud-Project) | Not currently published |
+| 3 | Movie Recommendation System | Content-based recommendations across 4,800 TMDB movies using TF-IDF vectors and cosine similarity. | [GitHub](https://github.com/JanakDobariya/movie-recommender-system) | [Open app](https://movie-recommendation-system31.streamlit.app/) |
+| 4 | SMS Spam Classifier | Reproducible TF-IDF and Multinomial Naive Bayes classifier with approximately 97.7% held-out accuracy. | [GitHub](https://github.com/JanakDobariya/SMS_Spam_Classifier) | [Open app](https://sms-spam-classifier31.streamlit.app/) |
+| 5 | Twitter Sentiment Classifier | Classifies short social-media text as negative, neutral, or positive with a trained scikit-learn model. | [GitHub](https://github.com/JanakDobariya/twitter-sentiment-classifier) | [Open app](https://twitter-sentiment-classifier.streamlit.app/) |
+| 6 | Narad Muni Chatbot | Session-aware Streamlit chatbot powered by Groq's chat-completions API. | [GitHub](https://github.com/JanakDobariya/Narad-Muni-chatbot) | [Open app](https://narad-muni-chatbot.streamlit.app/) |
+| 7 | Titanic Survival Predictor | Educational Streamlit interface for a trained gradient-boosting classification model. | [GitHub](https://github.com/JanakDobariya/titanic-streamlit-app) | [Open app](https://titanic-survival-dataset.streamlit.app/) |
+| 8 | CampusCloud | Django academic portal with profiles, notes, notifications, quizzes, results, and campus tools. | [GitHub](https://github.com/JanakDobariya/CampusCloud-Project) | Not currently published |
 
 ## Run locally
 
